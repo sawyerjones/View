@@ -1,0 +1,14 @@
+create screen, myScene
+create square, sq1, at bottomRight, blue, 0.75
+create square, sq2, at topLeft, green, 0.75
+create square, sq3, at topRight, orange, 0.75
+create square, sq4, at bottomLeft, red, 0.75
+
+animate glide, sq1, to topRight, 1.0
+animate glide, sq3, to topLeft, 1.0
+animate glide, sq2, to bottomLeft, 1.0
+animate glide, sq4, to bottomRight, 1.0
+
+animate glide, sq3, to bottomRight, 1.0
+animate glide, sq4, to topLeft, 1.0
+end

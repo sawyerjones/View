@@ -1,0 +1,13 @@
+create screen, myScreen
+create text, introText, "Welcome to View", at center
+
+create circle, circ, at left, red, 0.4
+create square, sq, at center, green, 0.5
+create triangle, tri, at right, blue, 0.5
+
+animate glide, circ, to bottomLeft, 1
+animate glide, sq, to topCenter, 1
+animate glide, tri, to bottomRight, 1
+
+
+end

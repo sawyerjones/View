@@ -1,0 +1,53 @@
+Program:
+  screen=CreateScreenCommand
+  commands*=Commands
+  end=EndCommand
+;
+
+CreateScreenCommand:
+  'create' 'screen' ',' name=ID
+;
+
+Commands:
+    CreateTextCommand | CreateShapeCommand | AnimationCommand
+;
+
+CreateTextCommand:
+  'create' 'text' ',' target=ID ',' content=STRING ',' 'at' position=Position
+;
+
+CreateShapeCommand:
+  'create' shape=ShapeType ',' name=ID ',' 'at' position=Position ',' color=Color ',' size=FLOAT
+;
+
+AnimationCommand:
+  SpinCommand | RotateAroundCommand | GlideCommand
+;
+
+SpinCommand:
+  'animate' 'spin' ',' target=ID ',' speed=FLOAT
+;
+
+RotateAroundCommand:
+  'animate' 'rotate' ',' target=ID ',' speed=FLOAT
+;
+
+GlideCommand:
+  'animate' 'glide' ',' target=ID ',' 'to' destination=Position ',' speed=FLOAT
+;
+
+EndCommand:
+  'end'
+;
+
+ShapeType:
+  'circle' | 'square' | 'rectangle' | 'triangle' | 'star'
+;
+
+Position:
+  'topLeft' | 'topCenter' | 'topRight' | 'left' | 'center' | 'right' | 'bottomRight' | 'bottomCenter' | 'bottomLeft'
+;
+
+Color:
+  'red' | 'orange' | 'yellow' | 'green' | 'blue' | 'purple' | 'black' | 'white'
+;

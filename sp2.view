@@ -1,0 +1,10 @@
+create screen, s
+create text, desc, "A programming language where objects can move!", at center
+
+create star, mainStar, at bottomCenter, yellow, 0.75
+create rectangle, leftRect, at topLeft, orange, 0.95
+create rectangle, rightRect, at topRight, purple, 0.95
+
+animate spin, mainStar, 2.0
+animate rotate, mainStar, 1.5
+end
