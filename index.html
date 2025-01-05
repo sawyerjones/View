@@ -10,14 +10,21 @@
     <div class=example>
         <h3>Try it yourself</h3>
         <div class=left>
-            <strong>helloWorld.view</strong>
+            <strong>intro.view</strong>
         </div>
         <pre>
-create screen, s
-create text, t, <span class=str>"hello world"</span>, at center
-end</pre>
+create screen, myScreen
+create text, introText, <span class="string">"Welcome to View"</span>, at center
+            
+create circle, circ, at left, red, 0.4
+create square, sq, at center, green, 0.5
+create triangle, tri, at right, blue, 0.5
+            
+animate glide, circ, to bottomLeft, 1
+animate glide, sq, to topCenter, 1
+animate glide, tri, to bottomRight, 1</pre>
         <pre>
-python3 run.py helloWorld.view</pre>
+python3 run.py intro.view</pre>
         <h4>Create stunning visuals like this one today!</h4>
         <video 
             style="width: 100%;
